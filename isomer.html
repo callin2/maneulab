@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script src="./bower_components/isomer/dist/isomer.js"></script>
+    <script src="./bower_components/lodash/dist/lodash.min.js"></script>
+</head>
+<body>
+
+<canvas id="canvas" width="1800" height="900" style="background-color: lightblue"></canvas>
+
+
+
+<script>
+    //---------------------
+//    window.requestAnimFrame = (function () {
+//        return window.requestAnimationFrame ||
+//                window.webkitRequestAnimationFrame ||
+//                window.mozRequestAnimationFrame ||
+//                function (callback) {
+//                    window.setTimeout(callback, 1000 / 60);
+//                };
+//    })();
+
+    window.requestAnimFrame =
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+
+    //---------------------
+    var iso = new Isomer(document.getElementById("canvas"), {
+        scale: 5,
+    });
+
+    var Shape = Isomer.Shape;
+    var Point = Isomer.Point;
+    var Color = Isomer.Color;
+    var Path  = Isomer.Path;
+    var Prism = Shape.Prism;
+
+    var WALL_HEIGHT = 10;
+
+
+    var bg = new Color(179, 197, 209);
+    var white = new Color(255, 255, 255);
+    var lips = new Color(249, 108, 78);
+    var lightOrange = new Color(254, 247, 35);
+    var darkOrange = new Color(254, 193, 16);
+    var gray = new Color(60, 69, 66);
+
+    var red = new Color(255,0,0,.2)
+    var blue = new Color(0,0,255,.3)
+
+
+    iso.add(Prism(new Point(110, 0, 0), 27, 90, 1), red);
+    iso.add(Prism(new Point(0, 0, 0), 110, 140, 1), red);
+
+
+    // floor
+    var floor = Shape.extrude(new Path([
+        Point(0, 0, 0),
+        Point(137, 0, 0),
+        Point(137, 90, 0),
+        Point(110, 90, 0),
+        Point(110, 140, 0),
+        Point(0, 140, 0)
+    ]), 1)
+    iso.add(floor, bg);
+
+    // wall
+
+    iso.add(Prism(new Point(0,139,1), 110,1,WALL_HEIGHT), new Color(255,255,255,.1))
+    iso.add(Prism(new Point(109,90,1), 1,50,WALL_HEIGHT), new Color(255,255,255))
+
+    iso.add(Prism(new Point(136,84,1), 1, 7,WALL_HEIGHT), new Color(255,255,255))
+
+    iso.add(Prism(new Point(109,90,1), 27,1,WALL_HEIGHT), new Color(255,255,255))
+    iso.add(Prism(new Point(136,0,1), 1, 64,WALL_HEIGHT), new Color(255,255,255))
+
+    // pole
+
+
+    // door
+
+    iso.add(Prism(new Point(136,64,1), 1, 10,WALL_HEIGHT), new Color(255,255,255,.1))
+    iso.add(Prism(new Point(136,74,1), 1, 10,WALL_HEIGHT), new Color(255,255,255,.1))
+
+
+    // room partition
+    iso.add(Prism(new Point(50,110,1), 1, 30,WALL_HEIGHT), new Color(255,255,255))
+    iso.add(Prism(new Point(0,110,1), 109, 1,WALL_HEIGHT), new Color(255,255,255,.1))
+
+    iso.add(Prism(new Point(109,50,1), 27, 1,WALL_HEIGHT), white)
+    iso.add(Prism(new Point(109,0,1), 1, 50,WALL_HEIGHT), new Color(255,255,255,.1))
+
+
+    // desk
+
+    function Desk(point, direction) {
+
+    }
+
+    function Parition(point, direction) {
+
+    }
+
+
+
+
+
+    //First bottom line
+//    iso.add(Prism(new Point(0, 7, 0), 1, 1, 1), blue);
+//    iso.add(Prism(new Point(0, 8, 0), 1, 1, 1), blue);
+//    iso.add(Prism(new Point(0, 9, 0), 1, 1, 1), gray);
+//    iso.add(Prism(new Point(0, 10, 0), 1, 1,1), gray);
+//    iso.add(Prism(new Point(0, 11, 0), 1, 1,1), gray);
+
+
+
+
+
+
+    //----------------------
+    (function animloop() {
+        requestAnimFrame(animloop);
+//        draw();
+    })();
+
+
+
+</script>
+
+</body>
+</html>
