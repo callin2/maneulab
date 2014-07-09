@@ -22,7 +22,8 @@
         }
 
         #container {
-            width: 1024px;
+            /*width: 1024px;*/
+            max-width: 1024px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -35,9 +36,14 @@
         }
 
         #body {
-            background-image: url("image/img_conts2.png");
-            width: 1024px;
-            height: 2439px;
+            width: 100%;
+        }
+
+        #bg {
+            top: 38px;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
         }
 
         #bottom {
@@ -82,6 +88,7 @@
     </div>
 
     <div id="body">
+        <img src="image/img_conts2.png" id="bg"/>
 
     </div>
 
