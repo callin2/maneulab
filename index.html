@@ -9,8 +9,10 @@
     <SCRIPT LANGUAGE="JavaScript">
         <!--
         function winScroll(y) {
+            var h = document.getElementById('bg').height;
+            var p = (y*h)/2439;
             $('html,body').animate({
-                scrollTop: y
+                scrollTop: p
             }, 500);
         }
         //-->
@@ -89,7 +91,6 @@
 
     <div id="body">
         <img src="image/img_conts2.png" id="bg"/>
-
     </div>
 
     <div id="bottom">
