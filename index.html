@@ -1,105 +1,318 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MANEUL Lab.</title>
-    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-
-    <SCRIPT LANGUAGE="JavaScript">
-        <!--
-        function winScroll(y) {
-            var h = document.getElementById('bg').height;
-            var p = (y*h)/2439;
-            $('html,body').animate({
-                scrollTop: p
-            }, 500);
-        }
-        //-->
-    </SCRIPT>
-
-    <style>
-        body {
-            margin: 0px;
-        }
-
-        #container {
-            /*width: 1024px;*/
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #header {
-            position: fixed;
-            background-image: url("image/box_menubg.png");
-            width: 1024px;
-            height: 38px;
-        }
-
-        #body {
-            width: 100%;
-        }
-
-        #bg {
-            top: 38px;
-            left: 0;
-            width: 100%;
-            min-height: 100%;
-        }
-
-        #bottom {
-            position: fixed;
-            bottom: 0;
-            background-image: url("image/box_bottom.png");
-            width: 1024px;
-            height: 38px;
-        }
-
-        #toTop {
-            position: absolute;
-            bottom: 34px;
-            right: 25px;
-        }
-
-        nav ul {
-            margin: 0px;
-            padding-left: 15px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-
-    </style>
-
-</head>
-
-<body>
-<div id="container">
-    <div id="header">
-        <nav>
-            <ul>
-                <li><img src="image/btn_top_up.png" onclick="winScroll(0)" onmouseover="this.src='image/btn_top_dn.png'" onmouseout="this.src='image/btn_top_up.png'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li><img src="image/btn_about_up.png" onclick="winScroll(500)" onmouseover="this.src='image/btn_about_dn.png'" onmouseout="this.src='image/btn_about_up.png'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li><img src="image/btn_vision_up.png" onclick="winScroll(1000)" onmouseover="this.src='image/btn_vision_dn.png'" onmouseout="this.src='image/btn_vision_up.png'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li><img src="image/btn_contact_up.png" onclick="winScroll(1600)" onmouseover="this.src='image/btn_contact_dn.png'" onmouseout="this.src='image/btn_contact_up.png'"/></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div id="body">
-        <img src="image/img_conts2.png" id="bg"/>
-    </div>
-
-    <div id="bottom">
-        <div id="toTop">
-            <img src="image/btn_ttop_up.png" onclick="winScroll(0)" onmouseover="this.src='image/btn_ttop_dn.png'" onmouseout="this.src='image/btn_ttop_up.png'"/>
-        </div>
-    </div>
-</div>
-
-
-</body>
-</html>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet" >
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/queries.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+      </head>
+      <body id="top">
+        <header id="home">
+          <nav>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                  <nav class="pull">
+                    <ul class="top-nav">
+                      <li><a href="#intro">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#features">우리 마늘랩의 가치와 비전은 <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#portfolio">우리 마늘랩이 진행하고 있는 사업은 <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#team">우리 마늘랩의 구성원은 <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#contact">우리 마늘랩에 연락하시려면 <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <section class="hero" id="hero">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-right navicon">
+                  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center inner">
+                  <h1 class="animated fadeInDown">MANEUL<span>LAB.</span></h1>
+                  <p class="animated fadeInUp delay-05s">For Me, For Friends, For All Together</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </header>
+        <section class="intro text-center section-padding" id="intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 wp1">
+                <h1 class="arrow">서양에 Apple이 있다면, 동양에는 (주)마늘랩이 있습니다.</h1>
+                <p>동양의 단군신화에서 환웅은 진실로 사람이 되고자 하는 이들에게 신령스러운 마늘과 쑥을 주었습니다.<br>
+                    마늘은 곧 이들에게 목표를 이루기 위한 ‘정성’과 ‘노력’의 상징물이 되었습니다.<br><br>
+                    서양의 성경에서는 금단의 열매, 선악과를 상징하는 ‘사과’가 있습니다.<br>
+                    세계적인 IT 기업인 Apple사도 ‘사과’를 보고 사명을 지었다고 합니다.<br><br>
+                    저희 마늘랩은 Apple사와 같은 창조력을 가진 세계적인 IT기업으로 성장하고자 하는 큰 꿈을 가지고 있습니다.<br>
+                    ‘사소한 일이라도 지극히 정성을 다하는 자만이 세상을 바꿀 수 있다’는 자세로 큰 꿈에 다가가려 합니다.<br><br>
+                    마늘에 담겨진 정성과 노력의 마음으로 연구하고 서비스하여,<br>모두가 행복한 회사를 만들고, 우리 아이들에게 행복한 세상을 전하고자 합니다.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features text-center section-padding" id="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">우리 마늘랩의 가치와 비전은</h1>
+                <div class="features-wrapper">
+                  <div class="col-md-4 wp2">
+                    <div class="icon">
+                      <i class="fa fa-laptop shadow"></i>
+                    </div>
+                    <h2>One-Stop 사업추진능력</h2>
+                    <p>SW, HW, 디자인, 기획 등 다양한 인력과 기술역량을 기반으로 융합형, 통합형 One-Stop 사업 추진 능력을 갖추고 있습니다.</p>
+                  </div>
+                  <div class="col-md-4 wp2 delay-05s">
+                    <div class="icon">
+                      <i class="fa fa-code shadow"></i>
+                    </div>
+                    <h2>풍부한 경험과 노하우</h2>
+                    <p>서비스 및 제품 개발과 운영 및 시스템 구축에 대한 풍부한 경험과 노하우 보유하고 있습니다.</p>
+                  </div>
+                  <div class="col-md-4 wp2 delay-1s">
+                    <div class="icon">
+                      <i class="fa fa-heart shadow"></i>
+                    </div>
+                    <h2>상생 협력관계 지향</h2>
+                    <p>개인의 창의성을 존중하는 조직문화와 같이 함께 더불어 성장/발전하는 Triple-Win의 상생 협력관계를 지향하고 있습니다.</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-center" id="responsive">
+          <div class="container-fluid nopadding responsive-services">
+            <div class="wrapper">
+              <div class="iphone">
+                <div class="wp3"></div>
+              </div>
+              <div class="fluid-white"></div>
+            </div>
+            <div class="container designs">
+              <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                  <div id="servicesSlider">
+                    <ul class="slides">
+                      <li>
+                        <h1 class="arrow">다양성을 존중하며, 같이 함께 더불어 성장하고 발전하는 행복공동체</h1>
+                        <p>여러가지 소리가 모여 아름다운 하모니가 되고, 형형색색의 빛깔이 조화롭게 어울려 멋진 불꽃축제가 되듯이,
+                        다양한 열정과 개성들이 조화롭게 어울려 아름다운 마늘랩 행복공동체를 만들어 갑니다.</p>
+                      </li>
+                      <li>
+                        <h1 class="arrow">SW-HW-Design 융합 기반으로 창조적 서비스 제공</h1>
+                        <p>마늘랩은 최고 수준의 전문 기술을 가지고 SW와 HW의 시너지를 통해 최고의 서비스와 제품을 만들겠습니다.</p>
+                        <p>SW+HW의 융합과 통합을 극대화하는 창조적인 디자인과 기획력으로 안정적인 플랫폼 서비스 구축과 효율적인 운영을 제공하며,
+                        당사의 다양한 구축 및 운영 노하우를 통한 최고의 서비스를 제공합니다.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio text-center section-padding" id="portfolio">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h1 class="arrow">우리 마늘랩이 진행하고 있는 사업은</h1>
+                  </div>
+              </div>
+              <br>
+            <div class="row">
+              <div id="portfolioSlider">
+                <ul class="slides">
+                  <li>
+                    <div class="col-md-4 wp4">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_01.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>공간 정보 기술 사업</h2>
+                      <p>실제 실내 공간을 3D로 제작하고, 3D Authoring Tool, 솔루션, Viewer 등을 개발하여 다양한 공간 정보 서비스를 제공합니다.</p>
+                    </div>
+                    <div class="col-md-4 wp4 delay-05s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_02.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>Commerce Payment Gateway 사업</h2>
+                      <p>기존의 POS시스템 ASP서비스를 통해서 본사-지점간 전사적 자원관리 서비스 제공합니다. 또한 POS 단말기에서 결제시 Payment Gateway 서비스를 적용하여 수수료 수익을 창출하고 있습니다.</p>
+                    </div>
+                    <div class="col-md-4 wp4 delay-1s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_03.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>Embedded Systems 사업</h2>
+                      <p>다양한 분야에 응용이 가능한 임베디드 시스템 원천 기반기술 보유하여 새롭고 다양한 임베디드 솔루션의 프로토타입 개발을 진행중입니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-4 wp4">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_04.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>융합형 메시징 솔루션 사업</h2>
+                      <p>메신저, mVoip, Multimedia file 전송 등 새롭고 파급력이 높은 부가 서비스를 제공하는 융합형 메세징 솔루션을 개발하여 고객에게 보다 진화된 메세징 서비스를 제공합니다.</p>
+                    </div>
+                    <div class="col-md-4 wp4 delay-05s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_05.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>동작인식 연주 솔루션 사업</h2>
+                      <p>스마트폰 및 Wearable 앱세서리(손목밴드 등)를 활용하여 동작인식 기술을 통한 개인 및 단체의 음악연주를 제공하는 게임 Application을 개발하고 있습니다.
+                      </p>
+                    </div>
+                    <div class="col-md-4 wp4 delay-1s">
+                      <div class="overlay-effect effects clearfix">
+                        <div class="img">
+                          <img src="img/pf_06.png" alt="Portfolio Item">
+                        </div>
+                      </div>
+                      <h2>사회적 기여 사업</h2>
+                      <p>취약계층의 삶의 질을 향상 시킬 수 있는 다양한 서비스를 개발하여 취약계층의 사회적 참여와 가치를 이끌어 낼 수 있는 사업을 진행하고 있습니다.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="team text-center section-padding" id="team">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">우리 마늘랩의 구성원은</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="team-wrapper">
+                <div id="teamSlider">
+                  <ul class="slides">
+                    <li>
+                      <div class="col-md-4 wp5">
+                        <img src="img/icon_sw.png" alt="Team Member">
+                        <h2>S/W 개발팀</h2>
+                        <p>3D 공간정보 솔루션, 융합형 메시징 솔루션, 동작인식 응용 기술 등을 개발하고 있습니다.</p>
+                      </div>
+                      
+                      <div class="col-md-4 wp5 delay-05s">
+                        <img src="img/icon_hw.png" alt="Team Member">
+                        <h2>H/W 개발팀</h2>
+                        <p>Embedded System 및 솔루션 구축, Smart Service 제품 등을 개발하고 있습니다.</p>
+                      </div>
+                      <div class="col-md-4 wp5 delay-1s">
+                        <img src="img/icon_pos.png" alt="Team Member">
+                        <h2>POS 운영팀</h2>
+                        <p>POS 시스템 개발/구축 및 운영을 담당하고 있습니다.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="col-md-4 wp5">
+                        <img src="img/icon_p.png" alt="Team Member">
+                        <h2>기획팀</h2>
+                        <p>다양한 프로젝트의 서비스/제품 설계 및 기획을 담당하고 있습니다.</p>
+                      </div>
+                      <div class="col-md-4 wp5 delay-05s">
+                        <img src="img/icon_d.png" alt="Team Member">
+                        <h2>디자인팀</h2>
+                        <p>창조적이고 사용자 친화적인 UI/UX 디자인을 개발하고 있습니다..</p>
+                      </div>
+                      <div class="col-md-4 wp5 delay-1s">
+                        <img src="img/icon_dbp.png" alt="Team Member">
+                        <h2>경영기획팀</h2>
+                        <p>경영에 필요한 지원 및 인력/시스템 관리를 담당하고 있습니다.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+          <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="arrow">우리 마늘랩에 연락하시려면</h1>
+              </div>
+            </div>
+            <div class="row contact-details">
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+                  <p>서울시 성동구 성수동2가 317-23 세종빌딩 10층</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+                  <p>+82 2 2038 3771</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="light-box box-hover">
+                  <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+                  <p><a href="#">info@maneullab.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="legals">
+                  <li><a href="#">(주)마늘랩</a></li>
+                  <li><a href="#">대표 장준영</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 credit">
+                <p>Copyright © 2014 Maneul Lab Inc. All Right Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/jquery.flexslider.js"></script>
+        <script src="js/modernizr.js"></script>
+      </body>
+    </html>
